@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Nacional de Notícias</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #c4170c;
+    color: white;
+    padding: 15px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.categoria {
+    color: #c4170c;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.data {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+Portal Nacional de Notícias
+</header>
+
+<div class="container">
+    <div class="categoria">URGENTE</div>
+
+    <h1>Jovem está sendo procurado por ser extremamente bonito e causar distrações públicas</h1>
+
+    <div class="subtitulo">
+        Autoridades afirmam que o nível de beleza ultrapassa padrões considerados seguros.
+    </div>
+
+    <div class="data" id="dataAtual"></div>
+
+    <img src="img/maverson.jpg">
+
+    <p>
+        Um jovem da região está sendo procurado após diversos relatos de que sua aparência estaria 
+        causando distrações em ambientes públicos. Segundo testemunhas, pessoas chegaram a 
+        interromper atividades importantes ao notar a presença do rapaz.
+    </p>
+
+    <p>
+        Especialistas afirmam que o nível de beleza apresentado pode ser considerado "fora do padrão normal",
+        levando a reações inesperadas da população.
+    </p>
+
+    <p>
+        As autoridades reforçam que, caso aviste o jovem, mantenha a calma e evite contato visual
+        prolongado para não comprometer sua concentração.
+    </p>
+
+</div>
+
+<footer>
+© 2026 Portal Nacional de Notícias - Todos os direitos reservados
+</footer>
+
+<script>
+function atualizarData() {
+    const data = new Date();
+    const opcoes = { 
+        day: '2-digit', 
+        month: 'long', 
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    document.getElementById("dataAtual").innerText =
+        "Publicado em " + data.toLocaleDateString("pt-BR", opcoes);
+}
+
+atualizarData();
+</script>
+
+</body>
+</html>
